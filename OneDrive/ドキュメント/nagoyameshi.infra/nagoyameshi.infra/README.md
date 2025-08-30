@@ -24,9 +24,19 @@
 1. AWS コンソールで WAF & Shield にアクセス
 2. 「ウェブ ACL を作成する」をクリック
 3. リソースタイプはグローバルリソースを選択、名前等を書き込む
-4.AWSリソースを追加でcloudfrontディストリビューションを選択し、リソースを選択する
-5.Web リクエスト本体の検査はデフォルトを選択
-6. ルールの追加「AWSManagedRulesCommonRuleSet」」
+4. AWSリソースを追加でcloudfrontディストリビューションを選択し、リソースを選択する
+5. Web リクエスト本体の検査はデフォルトを選択
+6. ルールの設定
+   - Add rules をクリック
+   - Add my own rules and rule groups を選択
+   - Rule typeは Rule builder を選択
+   - Rule の名前を作成し、Typeは Regular rule を選択
+   - If a request は matches the statement を選択
+   - Statement で Originates from a countryからJapan を選択
+   - IP address to use to determine the country of origin は Source IP address を選択
+   - Action で Allow を選択
+   - Default web ACL action for requests that don't match any rules で Block を選択
+
 5. CloudFront にアタッチ
    - 「CloudFront distributions」から対象ディストリビューションを選択
    - 「WAF」タブで Web ACL を関連付け
