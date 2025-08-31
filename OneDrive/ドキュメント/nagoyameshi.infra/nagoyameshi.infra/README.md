@@ -37,7 +37,7 @@
    - Action で Allow を選択
    - Default web ACL action for requests that don't match any rules で Block を選択
 
-5. CloudFront にアタッチ
+6. CloudFront にアタッチ
    - 「CloudFront distributions」から対象ディストリビューションを選択
    - 「WAF」タブで Web ACL を関連付け
-6. 設定後はテスト環境で動作確認
+7. 設定後はテスト環境で動作確認
